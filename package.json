@@ -1,0 +1,35 @@
+{
+  "name": "scam-vouch-discord-bot",
+  "version": "1.0.0",
+  "description": "Multi-server reputation system Discord bot with scam/vouch tracking and automatic role assignment",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch & node --watch dist/index.js",
+    "db:init": "psql $DATABASE_URL -f database/schema.sql"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "reputation",
+    "scam",
+    "vouch"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/pg": "^8.10.9",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
